@@ -1,0 +1,22 @@
+* C:\Users\lenovo\OneDrive\Desktop\project\q1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 16 15:44:40 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "q1.net"
+.INC "q1.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,142 @@
+
+**** 06/18/22 18:41:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 16 18:08:18 2022
+
+
+
+** Analysis setup **
+.tran 7ms 10 0 2ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "q2.net"
+
+**** INCLUDING q2.net ****
+* Schematics Netlist *
+
+
+
+L_L1         $N_0001 $N_0002  1  
+C_MohammadAbuShams         $N_0003 0  0.0833  
+R_R1         $N_0002 $N_0003  3  
+I_I1         $N_0003 0 DC -1.67  
+V_V5         $N_0001 0  AC 0
++SIN 0 12.5 0.955 0 0 0
+
+**** RESUMING q2.cir ****
+.INC "q2.als"
+
+
+
+**** INCLUDING q2.als ****
+* Schematics Aliases *
+
+.ALIASES
+L_L1            L1(1=$N_0001 2=$N_0002 )
+C_MohammadAbuShams          MohammadAbuShams(1=$N_0003 2=0 )
+R_R1            R1(1=$N_0002 2=$N_0003 )
+I_I1            I1(+=$N_0003 -=0 )
+V_V5            V5(+=$N_0001 -=0 )
+.ENDALIASES
+
+
+**** RESUMING q2.cir ****
+.probe
+
+
+.END
+
+**** 06/18/22 18:41:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    5.0100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         1.670E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 06/18/22 18:41:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 06/18/22 18:41:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    5.0100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         1.670E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .25
+

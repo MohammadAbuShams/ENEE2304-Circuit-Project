@@ -1,0 +1,144 @@
+
+**** 06/16/22 15:44:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 16 15:44:40 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "q1.net"
+
+**** INCLUDING q1.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 100V
+H_H4         $N_0004 0 VH_H4 5
+VH_H4        $N_0002 $N_0003 0V
+R_R2         $N_0003 $N_0001  59  
+R_R3         $N_0004 $N_0003  54  
+G_G3         0 $N_0003 $N_0005 $N_0001 0.02
+R_R4         $N_0001 $N_0005  49  
+E_E1         $N_0005 0 $N_0005 $N_0002 0.2
+R_R1         $N_0002 $N_0005  50  
+
+**** RESUMING q1.cir ****
+.INC "q1.als"
+
+
+
+**** INCLUDING q1.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+H_H4            H4(3=$N_0004 4=0 )
+VH_H4           H4(1=$N_0002 2=$N_0003 )
+R_R2            R2(1=$N_0003 2=$N_0001 )
+R_R3            R3(1=$N_0004 2=$N_0003 )
+G_G3            G3(3=0 4=$N_0003 1=$N_0005 2=$N_0001 )
+R_R4            R4(1=$N_0001 2=$N_0005 )
+E_E1            E1(3=$N_0005 4=0 1=$N_0005 2=$N_0002 )
+R_R1            R1(1=$N_0002 2=$N_0005 )
+.ENDALIASES
+
+
+**** RESUMING q1.cir ****
+.probe
+
+
+.END
+
+**** 06/16/22 15:44:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)  100.0000                   ($N_0002)   -4.5009                       
+
+($N_0003)   -4.5009                   ($N_0004)     .5626                       
+
+($N_0005)    1.1252                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.789E+00
+    VH_H4        1.125E-01
+
+    TOTAL POWER DISSIPATION   3.79E+02  WATTS
+
+
+**** 06/16/22 15:44:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\lenovo\OneDrive\Desktop\project\q1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G3      
+I-SOURCE    -1.978E+00
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E1      
+V-SOURCE     1.125E+00
+I-SOURCE     1.905E+00
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H4      
+V-SOURCE     5.626E-01
+I-SOURCE    -9.377E-02
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

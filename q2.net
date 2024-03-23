@@ -1,0 +1,10 @@
+* Schematics Netlist *
+
+
+
+L_L1         $N_0001 $N_0002  1  
+C_MohammadAbuShams         $N_0003 0  0.0833  
+R_R1         $N_0002 $N_0003  3  
+I_I1         $N_0003 0 DC -1.67  
+V_V5         $N_0001 0  AC 0
++SIN 0 12.5 0.955 0 0 0
